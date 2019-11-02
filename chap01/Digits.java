@@ -13,6 +13,8 @@ public class Digits {
             System.out.println("입력: ");
             no = in.nextInt();
         }while(no < 10 || no > 99);
+        //(no < 10 || no > 99) == !(no >= 10 && no <= 99)
+        //드로르간 법칙
 
         System.out.println(no +"을(를) 입력했습니다.");
     }
