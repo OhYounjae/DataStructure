@@ -17,5 +17,6 @@ public class SumWhile {
         }
 
         System.out.println("총합 : "+ sum);
+        System.out.println(i); //최종 i의 값은 1이 더해져 있다.
     }
 }
