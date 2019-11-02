@@ -17,7 +17,7 @@ public class Practice_10 {
             }
         }while(a >= b);
         //a가 b보다 크거나 같으면 참으로 설정되므로 while loop이 지속된다
-        //a가 b보다 작아야 while 조건이 거짓이 된다. 
+        //a가 b보다 작아야 while 조건이 거짓이 된다.
 
         System.out.println("b - a는 " + (b-a) + "입니다");
 
