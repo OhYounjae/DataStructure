@@ -18,17 +18,44 @@ public class CardConvRev {
             x /= r;
         }while(x != 0);
 
-        for(int i = 0; i < digits; i++){
-            System.out.print(d[i] + " " + i);
-            System.out.println();
-        }
+//        for(int i = 0; i < digits; i++){
+//            System.out.print(d[i] + " " + i);
+//            System.out.println();
+//        }
 
         return digits;
     }
 
     public static void main(String[] args){
-        char[] d = new char[20];
-        int a =cardConvR(59, 16, d);
+        Scanner in = new Scanner(System.in);
+        int no;
+        int cd;
+        int dno;
+        int retry;
+        char[] cno = new char[32];
 
+        System.out.println("10진수를 기수 변환합니다.");
+        do{
+            do {
+                System.out.print("변환하는 음이 아닌 정수 : ");
+                no = in.nextInt();
+            }while(no < 0);
+
+            do{
+                System.out.print("어떤 진수로 변환할까요?(2~36) : ");
+                cd = in.nextInt();
+            }while(cd < 2 || cd > 36);
+
+            dno = cardConvR(no, cd, cno);
+
+            System.out.print(cd + "진수로는 ");
+            for(int i = dno - 1; i >= 0; i--){
+                System.out.print(cno[i]);
+            }
+            System.out.println("입니다.");
+
+            System.out.println("한번 더 하시겠습니까?");
+            retry = in.nextInt();
+        }while(retry == 1);
     }
 }
